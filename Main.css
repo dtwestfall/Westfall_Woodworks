@@ -1,0 +1,121 @@
+.Landingpage {
+    position: relative;
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Text styles */
+    text-align: center;
+    color: #FFF8DC;
+    /* Background styles */
+background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url('https://i.pinimg.com/originals/81/10/9f/81109fc81964bb59bcd46b8e180c4cb6.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.Landingpage h1 {
+  position: relative;
+  left: 0vw;
+}
+
+.Landingpage h2 {
+  position: relative;
+  left: -20vw;
+  top: 8vh;
+}
+
+.glow-on-hover {
+  position: absolute;
+  top: -400px;
+  left: -200px;
+    width: 120px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    opacity: 0.70;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #708090, #708090, #fff, #708090, #fff, #fff, #708090, #fff, #fff);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/*------------------------------------------------------------------------*/
+
+.About {
+    position: relative;
+
+    width: 100vw;
+    height: 50vh;
+
+    display: flex;
+    background-color: #708090;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.Gallery {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url('https://cdn.hipwallpaper.com/i/6/36/zvRpnb.jpeg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+}
